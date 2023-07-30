@@ -12,7 +12,7 @@ model_path = 'models/MobileNetSSD_deploy.caffemodel'
 min_confidence = 0.2
 
 classes = ["background","aeroplane", "bicycle", "bird", "boat", "bottle","bus", "car", "cat","chair", "cow",
-           "diningtable", "dog", "horse", "motorbike", "persos", "pottedplant", "sheep", "sofa","train", "tvmonitor"]
+           "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa","train", "tvmonitor"]
 
 #colors for rectangle object detector
 np.random.seed(543210)
@@ -37,8 +37,8 @@ blob = cv2.dnn.blobFromImage(cv2.resize(image,(300,300)),0.007,(300,300), 130)
 ##PREDICTION
 net.setInput(blob)
 detected_object = net.forward()
-print(detected_object[0][0][0]) #data of the first object detected, detected_object[0][0][1] is the second etc
-print(detected_object.shape[3])
+# print(detected_object[0][0][0]) #data of the first object detected, detected_object[0][0][1] is the second etc
+# print(detected_object.shape[3])
 
 thickness_scale = image.shape[0] / 1000  # Scale the thickness based on the height
 font_scale = 2.0 * thickness_scale  # Scale the font size based on the thickness
