@@ -1,1 +1,6 @@
 opencv-python
+numpy
+matplotlib
+tensorflow
+streamlit
+Pillow
