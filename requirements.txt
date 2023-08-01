@@ -1,7 +1,8 @@
 Flask
 matplotlib
 numpy
-opencv_python==4.8.0.74
+opencv_python
+opencv-python-headless
 Pillow
 streamlit
 tensorflow
